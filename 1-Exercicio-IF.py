@@ -28,48 +28,38 @@
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
-
+# log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
+# if log['level'] == 'ERROR':
+#     print(log['message'])
+# else:
+#     print("Não tem error")
 
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+# idade = int(input("Digite sua idade: "))
+# if not (18 < idade < 65):
+#     print("Idade não é valida!")
+# email = input("Digite seu e-mail: ")
+# if "@" not in email or ".com" not in email:
+#     print("E-mail invalido!")
+# Para falar a verdade eu até pedi para IA me ajudar com validação do e-mail porque  eu sei que e-mail
+# valido não é só conter @ e .com. Mas começou a ficar complexo e fui ver solução e é bem mais simples, mas não valida tudo
+# Eu até queria usar while para usuário preencher idade e e-mail até serem validos, mas sei que while é para próximos exercicios
+
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
+valor = float(input("Valor: "))
+hora = int(input("Horario: "))
 
-### Exercício 6. Contagem de Palavras em Textos
-# Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
-
-### Exercício 7. Normalização de Dados
-# Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
-
-### Exercício 8. Filtragem de Dados Faltantes
-# Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
-
-### Exercício 9. Extração de Subconjuntos de Dados
-# Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
-
-### Exercício 10. Agregação de Dados por Categoria
-# Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
-
-### Exercícios com WHILE
-
-### Exercício 11. Leitura de Dados até Flag
-# Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
-
-### Exercício 12. Validação de Entrada
-# Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
-
-### Exercício 13. Consumo de API Simulado
-# Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
-
-### Exercício 14. Tentativas de Conexão
-# Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
-
-### Exercício 15. Processamento de Dados com Condição de Parada
-# Processar itens de uma lista até encontrar um valor específico que indica a parada.
+transacao = {"valor": valor, "Hora": hora}
+if valor > 10000 or 9 > hora > 18:
+    print("Transação invalida!")
+else:
+    print("Trasação valida!")
